@@ -22,18 +22,12 @@
     
  <?php
  //Object Oriented Method !!
-$mysqli = new mysqli("localhost","ashok","8848","RegForm");
-
-// Check connection
-if ($mysqli -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-  exit();
-}
+ include_once 'connect.php';
 
     $sql = "SELECT * FROM Form;";
-    $result = $mysqli -> query($sql);
+    $result = $conn -> query($sql);
 	if (!$result) {
-    		echo 'Could not run query: ' . $mysqli -> mysql_error;
+    		echo 'Could not run query: ' . $conn -> mysql_error;
     		exit;
 	}
 	
@@ -65,12 +59,12 @@ echo $result -> num_rows;
 //to check free_result method working !!
     $result -> free_result();
         $sql = "SELECT * FROM Form WHERE fname='Ashok';";
-    $result = $mysqli -> query($sql);
+    $result = $conn -> query($sql);
     print"<br>";
 echo "(special case) Total Rows: ";
 echo $result -> num_rows;
 
-$mysqli -> close();
+$conn -> close();
 ?>
 </table>
 	</center>
