@@ -1,0 +1,15 @@
+if (empty($_post["name"])){
+die("lllll");
+}
+
+values('".$_POST["name"]."','".$_POST["email"]."' ,'".$_POST["password"]."');
+
+$row = mysqli_fetch_assoc();
+<td><a href="details.php?id='.$row["id"].'">More</a></td>
+<td>'.$row["name"].'</td>
+
+
+
+Data Fetch
+List Data
+List Individual Data
