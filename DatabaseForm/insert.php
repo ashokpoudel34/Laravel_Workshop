@@ -9,20 +9,7 @@
 	<center>
 		<?php
 //Both OOM & Procedural Method !!
-
-		//$conn = mysqli_connect("localhost", "ashok", "8848", "RegForm");
-		$conn = new mysqli("localhost","ashok","8848","RegForm");
-		
-		// Check connection
-		/*if (mysqli_connect_errno()) {
-  			echo "Failed to connect to MySQL: " . mysqli_connect_error();
- 			 exit();
-		}*/
-		
-		if ($conn -> connect_errno) {
-  			echo "Failed to connect to MySQL: " . $conn -> connect_error;
-			  exit();
-		}
+		include_once 'connect.php';
 		
 		// Taking all 5 values from the form data(input)
 		$first_name = $_REQUEST['firstname'];
