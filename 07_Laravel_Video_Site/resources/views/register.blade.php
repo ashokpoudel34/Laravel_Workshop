@@ -54,7 +54,7 @@
      
       <div class="mb-3">  
         <label>Confirm Password</label>
-        <input type="password" class="form-control" name="password_confirmation ">
+        <input type="password" class="form-control" name="password_confirmation">
         <div class="form-text text-danger">{{ $errors->first('password_confirmation') }}</div>
       </div>
  

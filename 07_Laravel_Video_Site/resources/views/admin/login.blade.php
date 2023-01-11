@@ -1,4 +1,4 @@
-@extends('master')
+@extends('admin.master')
 
 @section('content')
 
@@ -10,7 +10,7 @@
   </div>
 
   <div class="entry-content">
-  <form action="{{ route('site.login') }}" method="post">
+  <form action="{{ route('admin_site.login') }}" method="post">
 
   @csrf
  
