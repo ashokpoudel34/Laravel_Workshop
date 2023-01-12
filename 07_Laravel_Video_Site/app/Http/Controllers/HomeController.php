@@ -26,7 +26,7 @@ class HomeController extends Controller
         // $u->phone= 8009892588;
         // $u->save();
         
-        // $u = User::find(2);
+        // $u = User::find(20);
         // $u->delete();
         
         // User::where("id", "2")->delete();
@@ -34,13 +34,13 @@ class HomeController extends Controller
         // $v = Video::find(1);
         // dd($v->toArray());
 
-        $v = Video::find(1);
+        // $v = Video::find(1);
 
-        echo $v->title."<br>";
-        echo $v->description."<br>";
-        echo $v->user->name."<br>";
-        echo $v->user->phone."<br>";
-        echo $v->categories->name."<br>";
+        // echo $v->title."<br>";
+        // echo $v->description."<br>";
+        // echo $v->user->name."<br>";
+        // echo $v->user->phone."<br>";
+        // echo $v->categories->name."<br>";
 
         //return view("home");
     }

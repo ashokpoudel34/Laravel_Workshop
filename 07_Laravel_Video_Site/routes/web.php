@@ -34,6 +34,7 @@ Route::post('/admin/login', [AdminUserController::Class, "login_process"]);
 Route::get('/admin/contact-us', [AdminContactController::Class, "index"])->name("admin_site.contact");
 
 Route::get('/admin/categories', [CategoriesController::Class, "index"])->name("admin_site.categories");
+Route::post('/admin/categories', [CategoriesController::Class, "insert_category"]);
 
 
 
