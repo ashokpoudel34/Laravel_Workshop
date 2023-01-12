@@ -2,10 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Video;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Categories extends Model
 {
     use HasFactory;
+
+    protected $table = "categories";
+    public function videos() {
+        $this->hasMany(Video::class, "category_id", "id");
+    }
 }

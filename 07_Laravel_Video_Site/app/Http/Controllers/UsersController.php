@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -25,10 +26,17 @@ class UsersController extends Controller
             "phone.digits" => "I dont think this phone will ring!"
         ]);
         
+        $profile_pic = $request->file('profile_pic')->store("profile_pics");
+       
+        $u = new User();
+        $u->name = $request->name;
+        $u->phone = $request->phone;
+        $u->email = $request->email;
+        $u->password = bcrypt($request->password);
+        $u->profile_pic = $profile_pic;
+ 
+        $u->save();
 
-
-        $t = $request->file('profile_pic')->store("profile_pics");
-                echo $t;
  
     }
 

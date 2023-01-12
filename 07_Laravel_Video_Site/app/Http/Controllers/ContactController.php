@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -19,6 +20,15 @@ class ContactController extends Controller
             "subject" => "required",
             "message" => "required|min:30"
         ]);
+
+        $c = new Contact();
+        $c->name = $request->name;
+        $c->phone = $request->phone;
+        $c->email = $request->email;
+        $c->subject = $request->subject;
+        $c->message = $request->message;
+
+        $c->save();
  
         echo "Ok!!";
  
