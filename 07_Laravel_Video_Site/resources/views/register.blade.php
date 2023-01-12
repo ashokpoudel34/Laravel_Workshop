@@ -24,7 +24,7 @@
  
     @endif -->
    
-    <form action="{{ route('site.register') }}" method="post">
+    <form action="{{ route('site.register') }}" method="post"  enctype="multipart/form-data">
      
       @csrf
  
@@ -57,6 +57,13 @@
         <input type="password" class="form-control" name="password_confirmation">
         <div class="form-text text-danger">{{ $errors->first('password_confirmation') }}</div>
       </div>
+
+      <div class="mb-3">  
+        <label>Profile Pic</label>
+        <input type="file" class="form-control" name="profile_pic">
+        <div class="form-text text-danger">{{ $errors->first('profile_pic') }}</div>
+      </div>
+
  
      
  

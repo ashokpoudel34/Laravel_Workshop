@@ -17,15 +17,18 @@ class UsersController extends Controller
             "phone" => "required|digits:10",
             "email" => "required|email",
             'password' => 'min:6|confirmed',
-            'password_confirmation' => 'required|min:6'
-
+            'password_confirmation' => 'required|min:6',
+            "profile_pic" => "required|file|mimes:jpg"
         ],[
             //"required" => "Hey, you forgot this!"
             "phone.required" => "We need phone to call you back!",
             "phone.digits" => "I dont think this phone will ring!"
         ]);
- 
-        echo "Ok!!";
+        
+
+
+        $t = $request->file('profile_pic')->store("profile_pics");
+                echo $t;
  
     }
 

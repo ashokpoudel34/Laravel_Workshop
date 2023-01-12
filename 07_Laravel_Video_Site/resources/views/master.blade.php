@@ -41,7 +41,7 @@
             <li><a href="{{ route('site.home') }}">Home</a></li>
             <li><a href="{{ route('site.register') }}">Register</a></li>
             <li><a href="{{ route('site.login') }}">Login</a></li>
-            <li><a href="">Upload</a></li>
+            <li><a href="{{ route('site.video.upload') }}">Upload</a></li>
             <li><a href="{{ route('site.contact') }}">Contact</a></li>
         </ul>
 
@@ -76,7 +76,7 @@
             <li><a href="{{ route('site.home') }}">Home</a></li>
             <li><a href="{{ route('site.register') }}">Register</a></li>
             <li><a href="{{ route('site.login') }}">Login</a></li>
-            <li><a href="">Upload</a></li>
+            <li><a href="{{ route('site.video.upload') }}">Upload</a></li>
             <li><a href="{{ route('site.contact') }}">Contact</a></li>
           </ul>
 
