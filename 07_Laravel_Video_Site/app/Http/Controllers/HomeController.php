@@ -42,6 +42,6 @@ class HomeController extends Controller
         // echo $v->user->phone."<br>";
         // echo $v->categories->name."<br>";
 
-        //return view("home");
+        return view("home");
     }
 }

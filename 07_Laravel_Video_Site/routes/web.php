@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\VideosController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\VideosBrowseController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\CategoriesController;
@@ -25,6 +26,10 @@ Route::post('/user/login', [UsersController::Class, "login_process"]);
 
 Route::get('/videos/upload', [VideosController::class, "upload"])->name('site.video.upload');
 Route::post('/videos/upload', [VideosController::class, "upload_process"]);
+
+Route::get('/videos/browse', [VideosBrowseController::class, "browse"])->name('site.video.browse');
+Route::get('/videos/details', [VideosBrowseController::class, "details"])->name('site.video.details');
+
 
 Route::get('/admin', [AdminHomeController::Class, "home"])->name("admin_site.home");
 

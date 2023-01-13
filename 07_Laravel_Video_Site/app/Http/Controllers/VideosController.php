@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class VideosController extends Controller
@@ -22,8 +23,13 @@ class VideosController extends Controller
         $x1 =  $request->file('thumb')->store("thumbs");
         $x2 =  $request->file('video_file')->store("videos");
  
-        echo $x1."<Br>".$x2;
-
+        $v = new Video();
+        $v->category_id = $request->category;
+        // $v->user_id = 
+        $v->title = $request->title;
+        $v->description = $request->description;
+        $v->thumb = $request->thumb;
+        $v->video_file = $video_file;
 
     }
 }

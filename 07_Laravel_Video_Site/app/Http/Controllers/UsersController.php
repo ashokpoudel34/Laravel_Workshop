@@ -34,8 +34,13 @@ class UsersController extends Controller
         $u->email = $request->email;
         $u->password = bcrypt($request->password);
         $u->profile_pic = $profile_pic;
- 
+
         $u->save();
+        
+        $request->session()->flash('register_process_done', true);
+        return redirect()->route("site.register");
+ 
+        
 
  
     }

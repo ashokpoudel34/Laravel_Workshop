@@ -9,6 +9,11 @@
   <div class="entry-meta">
     Please provide your data.
   </div>
+
+  @if( ! empty( session('register_process_done') ) )
+      <div class="alert alert-success">Thank you. You have now registered.</div>
+    @endif
+
  
   <div class="entry-content">
  
